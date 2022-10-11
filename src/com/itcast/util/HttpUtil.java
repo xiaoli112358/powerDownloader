@@ -17,7 +17,7 @@ public class HttpUtil {
         URL httpUrl = new URL(url);
         HttpURLConnection httpURLConnection = (HttpURLConnection) httpUrl.openConnection();
         //向所在服务器发送标识信息
-        httpURLConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/104.0.5112.14");
+        httpURLConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Mobile Safari/537.36");
         return httpURLConnection;
     }
 
