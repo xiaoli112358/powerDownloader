@@ -28,7 +28,7 @@ public class HttpUtil {
      * @return
      */
     public static String getHttpFileName(String url) {
-        int i = url.lastIndexOf('/');
+        int i = url.lastIndexOf("/");
         String name = url.substring(i + 1);
         return name;
     }

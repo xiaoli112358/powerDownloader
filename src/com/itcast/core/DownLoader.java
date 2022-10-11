@@ -2,6 +2,7 @@ package com.itcast.core;
 
 import com.itcast.constant.Constant;
 import com.itcast.util.HttpUtil;
+import com.itcast.util.LogUtils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -36,9 +37,11 @@ public class DownLoader {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("下载的文件不存在");
+            //System.out.println("下载的文件不存在");
+            LogUtils.error("下载的文件不存在{}",url);
         } catch (Exception e) {
-            System.out.println("下载失败！");
+            //System.out.println("下载失败！");
+            LogUtils.error("下载失败！");
         } finally {
             if (httpURLConnection != null) {
                 httpURLConnection.disconnect();
