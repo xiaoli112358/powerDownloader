@@ -1,23 +1,27 @@
 package com.itcast;
 
+import com.itcast.core.DownLoader;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String url=null;
-        if (args==null || args.length==0){
+        String url = null;
+        if (args == null || args.length == 0) {
 //            如果没有输入就写一个死循环
-            for (;  ; ) {
+            for (; ; ) {
                 System.out.println("请输入下载地址");
                 Scanner scanner = new Scanner(System.in);
                 url = scanner.next();
-                if (url!=null){
+                if (url != null) {
                     break;
                 }
             }
-        }else {
-            url=args[0];
+        } else {
+            url = args[0];
         }
-        System.out.println(url);
+//        System.out.println(url);
+        DownLoader downLoader = new DownLoader();
+        downLoader.downLoader(url);
     }
 }
